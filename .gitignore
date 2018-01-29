@@ -1,2 +1,1 @@
-data/raw/*
-!data/raw/README.md
+data/raw/*.csv
