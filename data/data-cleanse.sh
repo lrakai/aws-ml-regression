@@ -7,6 +7,7 @@
 
 raw_data_dir=raw
 name=Flights_Dec2016-Nov2017
+temp_file=temp-`date +%d-%m-%y-%H-%M-%S`.csv
 aggregate_file=$name.csv
 zip_file=$name.zip
 sampled_file=${name}_sampled.csv
@@ -14,11 +15,14 @@ zip_sampled_file=${name}_sampled.zip
 
 header=`head -1 $(ls $raw_data_dir/*\.csv | head -1) | sed 's/,$//g'`
 
-echo $header > $aggregate_file
 for file in `ls $raw_data_dir/*\.csv`; do
     echo "Processing $file"
-    tail --lines=+2 $file | grep -v ,, | sed 's/,$//g' >> $aggregate_file 
+    tail --lines=+2 $file | grep -v ,, | sed 's/,$//g' >> $temp_file 
 done
+
+echo $header > $aggregate_file
+shuf $temp_file >> $aggregate_file
+rm $temp_file
 
 zip $zip_file $aggregate_file
 sed -n '1~5p' $aggregate_file > $sampled_file
