@@ -1,6 +1,6 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS Machine Learning: Binary Classification",
+    "Description": "AWS Machine Learning: Regression",
     "Parameters": {
         "Region": {
             "Type": "String",
@@ -35,7 +35,7 @@
                     "Ref": "LabData"
                 },
                 "Urls": [
-                    "https://raw.githubusercontent.com/lrakai/aws-ml-binary-classification/master/data/wdbc.csv"
+                    "https://raw.githubusercontent.com/lrakai/aws-ml-regression/master/data/Flights_Dec2016-Nov2017_sampled.csv"
                 ]
             }
         },
