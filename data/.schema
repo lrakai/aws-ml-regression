@@ -1,0 +1,97 @@
+{
+    "version": "1.0",
+    "rowId": null,
+    "rowWeight": null,
+    "targetAttributeName": "ARR_DELAY",
+    "dataFormat": "CSV",
+    "dataFileContainsHeader": true,
+    "attributes": [
+        {
+            "attributeName": "YEAR",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "QUARTER",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "MONTH",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "DAY_OF_MONTH",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "DAY_OF_WEEK",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "UNIQUE_CARRIER",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "TAIL_NUM",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "FL_NUM",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "ORIGIN",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "DEST",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "CRS_DEP_TIME",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "DEP_TIME",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "DEP_DELAY",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "DEP_DELAY_NEW",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "DEP_DEL15",
+            "attributeType": "BINARY"
+        },
+        {
+            "attributeName": "DEP_DELAY_GROUP",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "CRS_ARR_TIME",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "ARR_DELAY",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "CRS_ELAPSED_TIME",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "DISTANCE",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "DISTANCE_GROUP",
+            "attributeType": "CATEGORICAL"
+        }
+    ],
+    "excludedAttributeNames": [
+        "YEAR"
+    ]
+}
