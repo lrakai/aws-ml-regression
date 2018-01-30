@@ -90,8 +90,5 @@
             "attributeName": "DISTANCE_GROUP",
             "attributeType": "CATEGORICAL"
         }
-    ],
-    "excludedAttributeNames": [
-        "YEAR"
     ]
 }
