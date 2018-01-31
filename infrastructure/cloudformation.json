@@ -35,7 +35,7 @@
                     "Ref": "LabData"
                 },
                 "Urls": [
-                    "https://raw.githubusercontent.com/lrakai/aws-ml-regression/master/data/Flights_Dec2016-Nov2017_sampled.csv",
+                    "https://raw.githubusercontent.com/lrakai/aws-ml-regression/master/data/Flights_Dec2016-Nov2017_sampled.zip",
                     "https://raw.githubusercontent.com/lrakai/aws-ml-regression/master/data/Flights_Dec2016-Nov2017_sampled.csv.schema"
                 ]
             }
@@ -60,6 +60,7 @@
                                 "import urllib.request",
                                 "from urllib.parse import urlparse",
                                 "import json",
+                                "import zipfile",
                                 "import boto3",
                                 "import cfnresponse",
                                 "",
@@ -73,6 +74,10 @@
                                 "    fileName = os.path.basename(urlPath)",
                                 "    filePath = '/tmp/' + fileName",
                                 "    urllib.request.urlretrieve(url, filePath)",
+                                "    if os.path.splitext(filePath)[1] == '.zip':",
+                                "        with zipfile.ZipFile(filePath, 'r') as zip_ref:",
+                                "            zip_ref.extractall('/tmp/')",
+                                "        filePath = filePath.replace('.zip', '.csv')",
                                 "    return filePath",
                                 "",
                                 "",
@@ -111,7 +116,8 @@
                         ]
                     }
                 },
-                "Runtime": "python3.6"
+                "Runtime": "python3.6",
+                "Timeout": 120
             }
         },
         "LambdaExecutionRole": {
