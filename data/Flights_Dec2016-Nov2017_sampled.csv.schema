@@ -1,7 +1,5 @@
 {
     "version": "1.0",
-    "rowId": null,
-    "rowWeight": null,
     "targetAttributeName": "ARR_DELAY",
     "dataFormat": "CSV",
     "dataFileContainsHeader": true,
